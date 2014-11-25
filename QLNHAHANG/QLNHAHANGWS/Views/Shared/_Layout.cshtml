@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title | E-Restaurant</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link rel="shortcut icon" href="~/images/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/images/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/images/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/images/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="~/images/ico/apple-touch-icon-57-precomposed.png">
+
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/animate.css","~/Content/bootstrap.min.css","~/Content/font-awesome.min.css","~/Content/main.css","~/Content/prettyPhoto.css","~/Content/price-range.css","~/Content/responsive.css" )
+        
+        @RenderSection("styles",required:false)
+
+        @Scripts.Render("~/bundles/modernizr")
+
+        
+    
+    </head>
+    <body>
+        <header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> +84 01644 034 277</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> e-restaurant@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="~/images/home/logo.png" alt="" /></a>
+						</div>
+						<div class="btn-group pull-right">
+							<div class="btn-group"><!--Select Country-->
+								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+									USA
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Canada</a></li>
+									<li><a href="#">UK</a></li>
+								</ul>
+							</div><!--Select Country-->
+							
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+									DOLLAR
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Canadian Dollar</a></li>
+									<li><a href="#">Pound</a></li>
+								</ul>
+							</div><!--Select Money-->
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-user"></i> Tài khoản</a></li>
+								<li><a href="#"><i class="fa fa-star"></i> Danh sách yêu thích</a></li>
+								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+								<li><a href="login.html"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							@{Html.RenderAction("_NavigationPartial", "Home");}
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Search"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+
+        <section>
+            @RenderBody()
+        </section>
+        
+
+
+        <footer id="footer"><!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<h2><span>e</span>-restaurant</h2>
+							<p>Nhà hàng online đầu tiên ở Việt Nam thương mại hóa online - chất lượng phục vụ là sứ mệnh của chúng tôi.</p>
+						</div><!--Thông tin SHOP-->
+					</div>
+					<div class="col-sm-7">
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="~/images/home/iframe1.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Nhà Hàng của chúng tôi</p>
+								<h2>24 DEC 2014</h2>
+							</div><!--Hình 1-->
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="~/images/home/iframe2.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Nhà Hàng của chúng tôi</p>
+								<h2>24 DEC 2014</h2>
+							</div><!--Hình 2-->
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="~/images/home/iframe3.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Nhà Hàng của chúng tôi</p>
+								<h2>24 DEC 2014</h2>
+							</div><!--Hình 3-->
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="~/images/home/iframe4.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Nhà Hàng của chúng tôi</p>
+								<h2>24 DEC 2014</h2>
+							</div><!--Hình 4-->
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="address">
+							<img src="~/images/home/map.png" alt="" />
+							<p>24/15/8 D3, Phường 12, Quận Bình Thạnh, TP.HCM</p>
+						</div><!--Hình bản đồ-->
+					</div>
+				</div>
+			</div>
+		</div><!--Footer Top-->
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Dịch vụ</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Trợ giúp Online</a></li>
+								<li><a href="#">Liện hệ chúng tôi</a></li>
+								<li><a href="#">Order Status</a></li>
+								<li><a href="#">Change Location</a></li>
+								<li><a href="#">FAQ’s</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Thực đơn</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Các món nước</a></li>
+								<li><a href="#">Các món khô</a></li>
+								<li><a href="#">Tráng miệng</a></li>
+								<li><a href="#">Các món chay</a></li>
+								<li><a href="#">Đồ uống</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Chính sách @*Policies*@</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Điều khoản@*Terms of Use*@</a></li>
+								<li><a href="#">Bảo mật</a></li>
+								<li><a href="#">Hoàn trả@*Refund Policy*@</a></li>
+								<li><a href="#">Hóa đơn</a></li>
+								<li><a href="#">Nhãn hiệu</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Nhà hàng @*About Shopper*@</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Company Information</a></li>
+								<li><a href="#">Careers</a></li>
+								<li><a href="#">Store Location</a></li>
+								<li><a href="#">Affillate Program</a></li>
+								<li><a href="#">Copyright</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>Thực khách</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Your email address" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Hãy ghé Nhà hàng của chúng tôi <br />để thưởng thức những món ăn hấp dẫn nhất...</p>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div><!--Footer Giua-->
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2013 E-RESTAURANT Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum & Hoang</a></span></p>
+				</div>
+			</div><!--CopyRight-->
+		</div><!--Footer Cuối-->
+		
+	</footer><!--/Footer-->
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/jquery/jquery.js", "~/jquery/jquery.prettyPhoto.js", "~/jquery/jquery.scrollUp.min.js", "~/jquery/main.js", "~/jquery/price-range.js", "~/jquery/bootstrap.min.js")
+        <script>
+            /*scroll to top*/
+            $(document).ready(function () {
+                $(function () {
+                    $.scrollUp({
+                        scrollName: 'scrollUp', // Element ID
+                        scrollDistance: 300, // Distance from top/bottom before showing element (px)
+                        scrollFrom: 'top', // 'top' or 'bottom'
+                        scrollSpeed: 300, // Speed back to top (ms)
+                        easingType: 'linear', // Scroll to top easing (see http://easings.net/)
+                        animation: 'fade', // Fade, slide, none
+                        animationSpeed: 200, // Animation in speed (ms)
+                        scrollTrigger: false, // Set a custom triggering element. Can be an HTML string or jQuery object
+                        //scrollTarget: false, // Set a custom target element for scrolling to the top
+                        scrollText: '<i class="fa fa-angle-up"></i>', // Text for element, can contain HTML
+                        scrollTitle: false, // Set a custom <a> title if required.
+                        scrollImg: false, // Set true to use image
+                        activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+                        zIndex: 2147483647 // Z-Index for the overlay
+                    });
+                });
+            });
+        </script>
+        
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

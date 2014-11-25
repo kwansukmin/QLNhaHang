@@ -1,0 +1,49 @@
+﻿@model IList<QLNHAHANGWS.Models.ThucDon>
+@{
+    ViewBag.Title = "DanhSach";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+	<div class="container">
+		<div class="row">
+            <div class="col-sm-3"><!--SideBar Left-->
+				@{Html.RenderPartial("_SidebarPartial");}
+			</div>
+            <div class="col-sm-9 padding-right"><!--Main Content-->
+				<div class="features_items"><!--features_items-->
+					<h2 class="title text-center">Features Items</h2>
+                    @foreach(var dsThucDon in Model)
+                    {
+                        <div class="col-sm-4">
+		                    <div class="product-image-wrapper">
+			                    <div class="single-products">
+					                    <div class="productinfo text-center">
+						                    <img src="~/Photos/ThucDon/@dsThucDon.Hinh" alt="@dsThucDon.TenThucDon" />
+						                    <h2>@dsThucDon.DonGia 000 VNĐ</h2>
+						                    <p>@dsThucDon.TenThucDon</p>
+						                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+					                    </div><!--Thông tin sản phẩm-->
+					                    <div class="product-overlay">
+						                    <div class="overlay-content">
+							                    <h2>@dsThucDon.DonGia 000 VNĐ</h2>
+							                    @Html.ActionLink("Xem chi tiết", "ChiTietThucDon", "ThucDon", new { id=dsThucDon.ThucDonID, name=dsThucDon.BiDanh}, new { @class="btn btn-default add-to-cart"})
+							                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+						                    </div>
+					                    </div><!--Thông tin đổ xuống màu Cam-->
+			                    </div>
+			                    <div class="choose">
+				                    <ul class="nav nav-pills nav-justified">
+					                    <li><a href="#"><i class="fa fa-plus-square"></i>Thêm vào ưa thích</a></li>
+					                    <li><a href="#"><i class="fa fa-plus-square"></i>Thêm vào so sánh</a></li>
+				                    </ul>
+			                    </div><!--Button Gio Hang-->
+		                    </div><!--Sản phẩm 1-->
+	                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

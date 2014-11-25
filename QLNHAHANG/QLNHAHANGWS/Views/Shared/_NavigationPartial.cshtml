@@ -1,0 +1,34 @@
+﻿@{ List<QLNHAHANGWS.Models.PhanLoai> dsPhanLoai = ViewBag.PhanLoais as List<QLNHAHANGWS.Models.PhanLoai>;
+    }
+
+
+
+    <ul class="nav navbar-nav collapse navbar-collapse">
+        <li><a href="index.html" class="active">Trang chủ</a></li>
+        <li class="dropdown"><a href="#">E-Restaurant<i class="fa fa-angle-down"></i></a>
+            <ul role="menu" class="sub-menu">
+                <li><a href="shop.html">Thực đơn</a></li>
+		        <li><a href="product-details.html">Chi tiết món ăn</a></li> 
+		        <li><a href="checkout.html">Checkout</a></li> 
+		        <li><a href="cart.html">Giỏ hàng</a></li> 
+		        <li><a href="login.html">Đăng nhập</a></li> 
+            </ul>
+        </li>
+    @foreach(var phanloai in dsPhanLoai)
+    {
+        <li class="dropdown">@Html.ActionLink(phanloai.TenPhanLoai, "TheoLoai", "ThucDon", new { id=phanloai.PhanLoaiID, name=phanloai.BiDanh}, htmlAttributes:null)
+            <ul role="menu" class="sub-menu">
+            @foreach(var nhomMon in phanloai.NhomMons)
+            {
+                <li>@Html.ActionLink(nhomMon.TenNhomMon,"TheoMon","ThucDon",new{id=nhomMon.NhomMonID, name=nhomMon.BiDanh},htmlAttributes:null)</li>   
+            }
+            </ul>
+        </li>
+    }   
+        <li class="dropdown"><a href="#">Bài viết<i class="fa fa-angle-down"></i></a>
+            <ul role="menu" class="sub-menu">
+                <li><a href="blog.html">Danh sách bài viết</a></li>
+		        <li><a href="blog-single.html">Chi tiết bài viết</a></li>
+            </ul>
+        </li>
+    </ul>

@@ -1,0 +1,724 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{608B6935-9349-43D7-9C8B-D2D7D0592D52}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLNHAHANGWS</RootNamespace>
+    <AssemblyName>QLNHAHANGWS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ThucDonController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\BaiViet.cs">
+      <DependentUpon>QLNHAHANGDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DatHang.cs">
+      <DependentUpon>QLNHAHANGDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DatHangCT.cs">
+      <DependentUpon>QLNHAHANGDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HopThu.cs">
+      <DependentUpon>QLNHAHANGDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KhachHang.cs">
+      <DependentUpon>QLNHAHANGDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NguoiDung.cs">
+      <DependentUpon>QLNHAHANGDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NhaHang.cs">
+      <DependentUpon>QLNHAHANGDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NhomMon.cs">
+      <DependentUpon>QLNHAHANGDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PhanLoai.cs">
+      <DependentUpon>QLNHAHANGDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLNHAHANGDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNHAHANGDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLNHAHANGDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNHAHANGDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLNHAHANGDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNHAHANGDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ThucDon.cs">
+      <DependentUpon>QLNHAHANGDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\prettyPhoto.css" />
+    <Content Include="Content\price-range.css" />
+    <Content Include="Content\responsive.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <EntityDeploy Include="Models\QLNHAHANGDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLNHAHANGDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\QLNHAHANGDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLNHAHANGDB.edmx</DependentUpon>
+      <LastGenOutput>QLNHAHANGDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\QLNHAHANGDB.edmx.diagram">
+      <DependentUpon>QLNHAHANGDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\QLNHAHANGDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLNHAHANGDB.edmx</DependentUpon>
+      <LastGenOutput>QLNHAHANGDB.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="images\404\404.png" />
+    <Content Include="images\blog\blog-one.jpg" />
+    <Content Include="images\blog\blog-three.jpg" />
+    <Content Include="images\blog\blog-two.jpg" />
+    <Content Include="images\blog\man-four.jpg" />
+    <Content Include="images\blog\man-one.jpg" />
+    <Content Include="images\blog\man-three.jpg" />
+    <Content Include="images\blog\man-two.jpg" />
+    <Content Include="images\blog\socials.png" />
+    <Content Include="images\cart\one.png" />
+    <Content Include="images\cart\three.png" />
+    <Content Include="images\cart\two.png" />
+    <Content Include="images\home\bg_border.png" />
+    <Content Include="images\home\gallery1.jpg" />
+    <Content Include="images\home\gallery2.jpg" />
+    <Content Include="images\home\gallery3.jpg" />
+    <Content Include="images\home\gallery4.jpg" />
+    <Content Include="images\home\girl1.jpg" />
+    <Content Include="images\home\girl2.jpg" />
+    <Content Include="images\home\girl3.jpg" />
+    <Content Include="images\home\iframe1.png" />
+    <Content Include="images\home\iframe2.png" />
+    <Content Include="images\home\iframe3.png" />
+    <Content Include="images\home\iframe4.png" />
+    <Content Include="images\home\logo.png" />
+    <Content Include="images\home\map.png" />
+    <Content Include="images\home\new.png" />
+    <Content Include="images\home\partner1.png" />
+    <Content Include="images\home\partner2.png" />
+    <Content Include="images\home\partner3.png" />
+    <Content Include="images\home\partner4.png" />
+    <Content Include="images\home\pricing.png" />
+    <Content Include="images\home\product1.jpg" />
+    <Content Include="images\home\product2.jpg" />
+    <Content Include="images\home\product3.jpg" />
+    <Content Include="images\home\product4.jpg" />
+    <Content Include="images\home\product5.jpg" />
+    <Content Include="images\home\product6.jpg" />
+    <Content Include="images\home\recommend1.jpg" />
+    <Content Include="images\home\recommend2.jpg" />
+    <Content Include="images\home\recommend3.jpg" />
+    <Content Include="images\home\sale.png" />
+    <Content Include="images\home\searchicon.png" />
+    <Content Include="images\home\shipping.jpg" />
+    <Content Include="images\product-details\1.jpg" />
+    <Content Include="images\product-details\new.jpg" />
+    <Content Include="images\product-details\rating.png" />
+    <Content Include="images\product-details\share.png" />
+    <Content Include="images\product-details\similar1.jpg" />
+    <Content Include="images\product-details\similar2.jpg" />
+    <Content Include="images\product-details\similar3.jpg" />
+    <Content Include="images\shop\advertisement.jpg" />
+    <Content Include="images\shop\product10.jpg" />
+    <Content Include="images\shop\product11.jpg" />
+    <Content Include="images\shop\product12.jpg" />
+    <Content Include="images\shop\product7.jpg" />
+    <Content Include="images\shop\product8.jpg" />
+    <Content Include="images\shop\product9.jpg" />
+    <Content Include="jquery\bootstrap.min.js" />
+    <Content Include="jquery\contact.js" />
+    <Content Include="jquery\gmaps.js" />
+    <Content Include="jquery\html5shiv.js" />
+    <Content Include="jquery\jquery.js" />
+    <Content Include="jquery\jquery.prettyPhoto.js" />
+    <Content Include="jquery\jquery.scrollUp.min.js" />
+    <Content Include="jquery\main.js" />
+    <Content Include="jquery\price-range.js" />
+    <Content Include="Photos\BaiViet\10MeoNho.jpg" />
+    <Content Include="Photos\BaiViet\am-thuc-viet-nam-qua-cac-vung-mien.jpg" />
+    <Content Include="Photos\BaiViet\AmTVM3.png" />
+    <Content Include="Photos\BaiViet\AmTVMien2.jpg" />
+    <Content Include="Photos\BaiViet\an-dem-thu-vui-am-thuc-ha-thanh.jpg" />
+    <Content Include="Photos\BaiViet\baconcuu.jpg" />
+    <Content Include="Photos\BaiViet\banh_cuon_thanh_tri.jpg" />
+    <Content Include="Photos\BaiViet\banh_da_cua.jpg" />
+    <Content Include="Photos\BaiViet\binhchontop20.jpg" />
+    <Content Include="Photos\BaiViet\bong_bi_nhoi_thit_hap.jpg" />
+    <Content Include="Photos\BaiViet\bun-dau.jpg" />
+    <Content Include="Photos\BaiViet\BunCa.jpg" />
+    <Content Include="Photos\BaiViet\bun_cha_ha_noi.jpg" />
+    <Content Include="Photos\BaiViet\cac-mon-ngon-tu-hoa.jpg" />
+    <Content Include="Photos\BaiViet\canh_rau_muong_nau_tom.jpg" />
+    <Content Include="Photos\BaiViet\ca_chep_om_dua.jpg" />
+    <Content Include="Photos\BaiViet\comchay.jpg" />
+    <Content Include="Photos\BaiViet\comchay2.jpg" />
+    <Content Include="Photos\BaiViet\comchay3.jpg" />
+    <Content Include="Photos\BaiViet\comchay4.jpg" />
+    <Content Include="Photos\BaiViet\comchay6.jpg" />
+    <Content Include="Photos\BaiViet\CTbinhchon.jpg" />
+    <Content Include="Photos\BaiViet\GioCha.jpg" />
+    <Content Include="Photos\BaiViet\Hydrangeas.jpg" />
+    <Content Include="Photos\BaiViet\Jellyfish.jpg" />
+    <Content Include="Photos\BaiViet\khaitruongCS3.jpg" />
+    <Content Include="Photos\BaiViet\KhongGian1.jpg" />
+    <Content Include="Photos\BaiViet\KhongGian2.JPG" />
+    <Content Include="Photos\BaiViet\khuyenmai2.jpg" />
+    <Content Include="Photos\BaiViet\mon_an_sau_tet.JPG" />
+    <Content Include="Photos\BaiViet\NhaTinhThuong.jpg" />
+    <Content Include="Photos\BaiViet\Penguins.jpg" />
+    <Content Include="Photos\BaiViet\Thianhtrenface.jpg" />
+    <Content Include="Photos\BaiViet\TungbunghaiSan.jpg" />
+    <Content Include="Photos\BaiViet\TuThienfan.jpg" />
+    <Content Include="Photos\Banner\2Bnner.jpg" />
+    <Content Include="Photos\Banner\2Bnner02.jpg" />
+    <Content Include="Photos\Banner\2Bnner03.jpg" />
+    <Content Include="Photos\Banner\2Bnner04.jpg" />
+    <Content Include="Photos\Banner\2Bnner05.jpg" />
+    <Content Include="Photos\Banner\2Bnner06.jpg" />
+    <Content Include="Photos\Banner\2Bnner07.jpg" />
+    <Content Include="Photos\ThucDon\Americano.jpg" />
+    <Content Include="Photos\ThucDon\bac-suu.jpg" />
+    <Content Include="Photos\ThucDon\banh_beo_chen.jpg" />
+    <Content Include="Photos\ThucDon\banh_bot_loc.jpg" />
+    <Content Include="Photos\ThucDon\banh_canh_cua.jpg" />
+    <Content Include="Photos\ThucDon\banh_ca_chien_gion.jpg" />
+    <Content Include="Photos\ThucDon\banh_da_rieu_cua.jpg" />
+    <Content Include="Photos\ThucDon\banh_hoi.jpg" />
+    <Content Include="Photos\ThucDon\banh_trang_phoi_suong.jpg" />
+    <Content Include="Photos\ThucDon\banh_xeo.jpg" />
+    <Content Include="Photos\ThucDon\ba_ba_om_chuoi_dau.jpg" />
+    <Content Include="Photos\ThucDon\bo-huc.jpg" />
+    <Content Include="Photos\ThucDon\Bo_nuong_muoi_ot.jpg" />
+    <Content Include="Photos\ThucDon\bun_bo_hue.jpg" />
+    <Content Include="Photos\ThucDon\bun_bo_nam_bo.jpg" />
+    <Content Include="Photos\ThucDon\BURGER_BULGOGI_VALUE.jpg" />
+    <Content Include="Photos\ThucDon\BURGER_LOTTERIA_VALUE.jpg" />
+    <Content Include="Photos\ThucDon\BURGER_TOM_VALUE.jpg" />
+    <Content Include="Photos\ThucDon\ca-cao-sua-nong.jpg" />
+    <Content Include="Photos\ThucDon\ca-cao.jpg" />
+    <Content Include="Photos\ThucDon\cafe-sinh-to.jpg" />
+    <Content Include="Photos\ThucDon\cafe-sua-nong-da.jpg" />
+    <Content Include="Photos\ThucDon\cang-ghe_rang_muoi.jpg" />
+    <Content Include="Photos\ThucDon\canh_ga_chien_nuoc_mam.jpg" />
+    <Content Include="Photos\ThucDon\canh_ga_nuong_sot_teriyaki.jpg" />
+    <Content Include="Photos\ThucDon\canh_nghe_nau_rau_mung_toi.jpg" />
+    <Content Include="Photos\ThucDon\Cappuccino-Viennese.jpg" />
+    <Content Include="Photos\ThucDon\ca_chep_chien_xu.jpg" />
+    <Content Include="Photos\ThucDon\ca_chinh.jpg" />
+    <Content Include="Photos\ThucDon\ca_dieu_hong_hap_xi_dau.jpg" />
+    <Content Include="Photos\ThucDon\Ca_hoi_nuong_muoi.jpg" />
+    <Content Include="Photos\ThucDon\ca_loc_hap_cuon_banh_trang.jpg" />
+    <Content Include="Photos\ThucDon\Ca_NUGGET.jpg" />
+    <Content Include="Photos\ThucDon\ca_ro_nuong_ot.jpg" />
+    <Content Include="Photos\ThucDon\ca_thu_nuong_muoi_ot.jpg" />
+    <Content Include="Photos\ThucDon\ca_tim_nuong_thit_bam.jpg" />
+    <Content Include="Photos\ThucDon\chanh-da-nong.jpg" />
+    <Content Include="Photos\ThucDon\cha_ca_kieu_thai.jpg" />
+    <Content Include="Photos\ThucDon\cha_ca_lang.jpg" />
+    <Content Include="Photos\ThucDon\CHEESE_VALUE.jpg" />
+    <Content Include="Photos\ThucDon\che_ba_ba.jpg" />
+    <Content Include="Photos\ThucDon\che_chuoi_hap.jpg" />
+    <Content Include="Photos\ThucDon\che_suong_xa_hat_luu.jpg" />
+    <Content Include="Photos\ThucDon\che_thung.jpg" />
+    <Content Include="Photos\ThucDon\chim_cut_chien.jpg" />
+    <Content Include="Photos\ThucDon\Chocolate.jpg" />
+    <Content Include="Photos\ThucDon\CHOCOLATE_HAZENUT.jpg" />
+    <Content Include="Photos\ThucDon\com.jpg" />
+    <Content Include="Photos\ThucDon\com_chien.jpg" />
+    <Content Include="Photos\ThucDon\com_ga_sot_dau.jpg" />
+    <Content Include="Photos\ThucDon\com_ga_vien.jpg" />
+    <Content Include="Photos\ThucDon\com_thit_bo.jpg" />
+    <Content Include="Photos\ThucDon\com_xao_dua.jpg" />
+    <Content Include="Photos\ThucDon\cua_bay_chien_bo_toi.jpg" />
+    <Content Include="Photos\ThucDon\Cupcake.jpg" />
+    <Content Include="Photos\ThucDon\dau_ran.jpg" />
+    <Content Include="Photos\ThucDon\dia-trai-cay.jpg" />
+    <Content Include="Photos\ThucDon\dieu_hong_nuong_muoi_ot.jpg" />
+    <Content Include="Photos\ThucDon\Double-Espresso.jpg" />
+    <Content Include="Photos\ThucDon\Ech_tam_bot_chien.jpg" />
+    <Content Include="Photos\ThucDon\ep-cam.jpg" />
+    <Content Include="Photos\ThucDon\ep-chanh-day.jpg" />
+    <Content Include="Photos\ThucDon\ep-dua-hau.jpg" />
+    <Content Include="Photos\ThucDon\ep-tao.jpg" />
+    <Content Include="Photos\ThucDon\ep-thom.jpg" />
+    <Content Include="Photos\ThucDon\Espresso-Con-Pana.jpg" />
+    <Content Include="Photos\ThucDon\Espresso-Float.jpg" />
+    <Content Include="Photos\ThucDon\Espresso.jpg" />
+    <Content Include="Photos\ThucDon\FINGER_CHICKEN_1000GR.jpg" />
+    <Content Include="Photos\ThucDon\Frappu-Vanilla.jpg" />
+    <Content Include="Photos\ThucDon\ga_chien_fo_mai.jpg" />
+    <Content Include="Photos\ThucDon\ga_chien_gion.jpg" />
+    <Content Include="Photos\ThucDon\ga_dam_bong.jpg" />
+    <Content Include="Photos\ThucDon\ga_gd_6mieng.jpg" />
+    <Content Include="Photos\ThucDon\ga_gd_9mieng.jpg" />
+    <Content Include="Photos\ThucDon\Ga_hs_1mieng.jpg" />
+    <Content Include="Photos\ThucDon\ga_hs_phan.jpg" />
+    <Content Include="Photos\ThucDon\ga_lac.jpg" />
+    <Content Include="Photos\ThucDon\ga_mang_cay.jpg" />
+    <Content Include="Photos\ThucDon\ga_ran_1mieng.jpg" />
+    <Content Include="Photos\ThucDon\ga_ran_phan.jpg" />
+    <Content Include="Photos\ThucDon\ga_sot_dau_6mieng.jpg" />
+    <Content Include="Photos\ThucDon\ga_sot_dau_phan.jpg" />
+    <Content Include="Photos\ThucDon\ga_tender_3mieng.jpg" />
+    <Content Include="Photos\ThucDon\ga_vien.jpg" />
+    <Content Include="Photos\ThucDon\ga_vien_cola.jpg" />
+    <Content Include="Photos\ThucDon\ghe_rang_me.jpg" />
+    <Content Include="Photos\ThucDon\GIFT_SET.jpg" />
+    <Content Include="Photos\ThucDon\goi_cuon.jpg" />
+    <Content Include="Photos\ThucDon\goi_xoai.jpg" />
+    <Content Include="Photos\ThucDon\GREEN MINT_MOJITO.jpg" />
+    <Content Include="Photos\ThucDon\hai_sam_hap_dau_so.jpg" />
+    <Content Include="Photos\ThucDon\Hazenut.jpg" />
+    <Content Include="Photos\ThucDon\Hot-ice-Latte.jpg" />
+    <Content Include="Photos\ThucDon\Hot-Mocha.jpg" />
+    <Content Include="Photos\ThucDon\hot_pie.jpg" />
+    <Content Include="Photos\ThucDon\hu_tieu.jpg" />
+    <Content Include="Photos\ThucDon\hu_tieu_bo_kho.jpg" />
+    <Content Include="Photos\ThucDon\hu_tieu_bo_vien.jpg" />
+    <Content Include="Photos\ThucDon\Iced-Mocha.jpg" />
+    <Content Include="Photos\ThucDon\kem-Cafe-Liegeois.jpg" />
+    <Content Include="Photos\ThucDon\kem-Float.jpg" />
+    <Content Include="Photos\ThucDon\Kem-Flocon.jpg" />
+    <Content Include="Photos\ThucDon\Kem-Milk-Float.jpg" />
+    <Content Include="Photos\ThucDon\kem-trai-dua.jpg" />
+    <Content Include="Photos\ThucDon\khoai_lang_chien.jpg" />
+    <Content Include="Photos\ThucDon\khoai_tay_chien.jpg" />
+    <Content Include="Photos\ThucDon\khoai_tay_lac.jpg" />
+    <Content Include="Photos\ThucDon\la-han-qua.jpg" />
+    <Content Include="Photos\ThucDon\lau_ca_chep.jpg" />
+    <Content Include="Photos\ThucDon\lau_ca_loc.jpg" />
+    <Content Include="Photos\ThucDon\lau_ca_song.jpg" />
+    <Content Include="Photos\ThucDon\lau_ca_tam.jpg" />
+    <Content Include="Photos\ThucDon\lau_ca_trinh.jpg" />
+    <Content Include="Photos\ThucDon\lau_chao_chim.jpg" />
+    <Content Include="Photos\ThucDon\lau_mam_chau_doc.jpg" />
+    <Content Include="Photos\ThucDon\lau_suon_om_sau.jpg" />
+    <Content Include="Photos\ThucDon\Lemon.jpg" />
+    <Content Include="Photos\ThucDon\Lipton-mat-cam.jpg" />
+    <Content Include="Photos\ThucDon\Lipton-nong-cam.jpg" />
+    <Content Include="Photos\ThucDon\Lipton-nong-da.jpg" />
+    <Content Include="Photos\ThucDon\Lipton-si-muoi.jpg" />
+    <Content Include="Photos\ThucDon\Lipton-sua-nong-da.jpg" />
+    <Content Include="Photos\ThucDon\luon_xao_mang.jpg" />
+    <Content Include="Photos\ThucDon\Machiato.jpg" />
+    <Content Include="Photos\ThucDon\mien_luon.jpg" />
+    <Content Include="Photos\ThucDon\mien_xao_cua.jpg" />
+    <Content Include="Photos\ThucDon\mien_xao_luon.jpg" />
+    <Content Include="Photos\ThucDon\mi_quang.jpg" />
+    <Content Include="Photos\ThucDon\muc_1_nang.jpg" />
+    <Content Include="Photos\ThucDon\muc_chien_sa_te.JPG" />
+    <Content Include="Photos\ThucDon\muc_ran.jpg" />
+    <Content Include="Photos\ThucDon\muc_xao_dua_cai.jpg" />
+    <Content Include="Photos\ThucDon\muc_xien_nuong.jpg" />
+    <Content Include="Photos\ThucDon\nem_chua.jpg" />
+    <Content Include="Photos\ThucDon\nem_cua_be.jpg" />
+    <Content Include="Photos\ThucDon\nem_nuong.jpg" />
+    <Content Include="Photos\ThucDon\ngheu_vang_nuong_mo_hanh.jpg" />
+    <Content Include="Photos\ThucDon\ngon_su_xao_toi.jpg" />
+    <Content Include="Photos\ThucDon\nom_chim_cut.jpg" />
+    <Content Include="Photos\ThucDon\oc_huong_nuong.jpg" />
+    <Content Include="Photos\ThucDon\Oreo.jpg" />
+    <Content Include="Photos\ThucDon\PASSION_MOJITO.jpg" />
+    <Content Include="Photos\ThucDon\pepsi.jpg" />
+    <Content Include="Photos\ThucDon\phin-cafe-da.jpg" />
+    <Content Include="Photos\ThucDon\pho_bo_chin_nam_gau.jpg" />
+    <Content Include="Photos\ThucDon\pho_bo_tai_chin.jpg" />
+    <Content Include="Photos\ThucDon\pho_ga.jpg" />
+    <Content Include="Photos\ThucDon\pho_mai.jpg" />
+    <Content Include="Photos\ThucDon\pho_xao_gion.jpg" />
+    <Content Include="Photos\ThucDon\PREMIUM_CHICKEN_VALUE.jpg" />
+    <Content Include="Photos\ThucDon\rau_cai_luoc.jpg" />
+    <Content Include="Photos\ThucDon\RICE_BULGOGI_VALUE.jpg" />
+    <Content Include="Photos\ThucDon\rieu_cua_bap_bo.jpg" />
+    <Content Include="Photos\ThucDon\salat_ly.jpg" />
+    <Content Include="Photos\ThucDon\sam-dua-sua.jpg" />
+    <Content Include="Photos\ThucDon\SHIRLEY_TEMPLE.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-bo.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-ca-chua.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-chay-day.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-dau.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-du-du.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-dua-tuoi.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-kem-dau.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-kem-khoai-mon.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-kem-Vanila.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-mang-cau.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-saboche.jpg" />
+    <Content Include="Photos\ThucDon\sinh-to-xoai.jpg" />
+    <Content Include="Photos\ThucDon\Smoothies-chanh-day.jpg" />
+    <Content Include="Photos\ThucDon\SmoothiesHappyEnd.jpg" />
+    <Content Include="Photos\ThucDon\soda.jpg" />
+    <Content Include="Photos\ThucDon\SOUP.jpg" />
+    <Content Include="Photos\ThucDon\so_huyet_nuong.jpg" />
+    <Content Include="Photos\ThucDon\sting.jpg" />
+    <Content Include="Photos\ThucDon\STRAWBERRY_MOJITO.jpg" />
+    <Content Include="Photos\ThucDon\sua-tuoi-khong-da.jpg" />
+    <Content Include="Photos\ThucDon\sua-tuoi.jpg" />
+    <Content Include="Photos\ThucDon\suon_nuong_mat_ong.jpg" />
+    <Content Include="Photos\ThucDon\suon_nuong_xa_ot.jpg" />
+    <Content Include="Photos\ThucDon\thit_heo_chien_gion_xot_chua_ngot.jpg" />
+    <Content Include="Photos\ThucDon\thit_heo_chien_xu.jpg" />
+    <Content Include="Photos\ThucDon\tom_chien_gion_xot_trung_muoi.jpg" />
+    <Content Include="Photos\ThucDon\tom_he_nuong.jpg" />
+    <Content Include="Photos\ThucDon\tom_kho.jpg" />
+    <Content Include="Photos\ThucDon\tom_su_nuong.jpg" />
+    <Content Include="Photos\ThucDon\tom_vien.jpg" />
+    <Content Include="Photos\ThucDon\tom_vien_cola.jpg" />
+    <Content Include="Photos\ThucDon\tra-ngung.jpg" />
+    <Content Include="Photos\ThucDon\tra-sua-thach.jpg" />
+    <Content Include="Photos\ThucDon\tra-sua-vi-thom.jpg" />
+    <Content Include="Photos\ThucDon\tra-xanh.jpg" />
+    <Content Include="Photos\ThucDon\tradoctothan.jpg" />
+    <Content Include="Photos\ThucDon\trung_chien_rau_cu.jpg" />
+    <Content Include="Photos\ThucDon\VALUE_STEAK.jpg" />
+    <Content Include="Photos\ThucDon\vanilla.jpg" />
+    <Content Include="Photos\ThucDon\xa_lach_bap.jpg" />
+    <Content Include="Photos\ThucDon\xi-muoi.jpg" />
+    <Content Include="Photos\ThucDon\xoi_ga.jpg" />
+    <Content Include="Photos\ThucDon\xoi_vo.jpg" />
+    <Content Include="Photos\ThucDon\yaourt-ca-phe.jpg" />
+    <Content Include="Photos\ThucDon\yaourt-cam.jpg" />
+    <Content Include="Photos\ThucDon\yaourt-da.jpg" />
+    <Content Include="Photos\ThucDon\yaourt-hu.jpg" />
+    <Content Include="Photos\ThucDon\yaourt-thach-trai-cay.jpg" />
+    <Content Include="Photos\ThucDon\yaourt-trai-cay.jpg" />
+    <Content Include="Photos\ThucDon\ẠPPLE_MINT.jpg" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\ThongBao.cshtml" />
+    <Content Include="Views\Shared\_NavigationPartial.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\ThucDon\Index.cshtml" />
+    <Content Include="Views\ThucDon\Details.cshtml" />
+    <Content Include="Views\ThucDon\Create.cshtml" />
+    <Content Include="Views\ThucDon\Edit.cshtml" />
+    <Content Include="Views\ThucDon\Delete.cshtml" />
+    <Content Include="Views\ThucDon\DanhSach.cshtml" />
+    <Content Include="Views\Shared\_SidebarPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1895/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

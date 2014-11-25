@@ -1,0 +1,89 @@
+﻿@model QLNHAHANGWS.Models.ThucDon
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>ThucDon</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TenThucDon)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TenThucDon)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DonGia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DonGia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.KhuyenMai)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.KhuyenMai)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MoTa)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MoTa)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Hinh)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Hinh)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ThuocMien)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ThuocMien)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NgayCapNhat)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NgayCapNhat)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NhomMon.TenNhomMon)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NhomMon.TenNhomMon)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NgungBan)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NgungBan)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BiDanh)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BiDanh)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
